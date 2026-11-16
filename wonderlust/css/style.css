@@ -215,3 +215,105 @@ body {
 .nav__link:focus-visible {
   color: var(--color-primary);
 }
+/* ===== Tablet: 768px and up ===== */
+@media (min-width: 768px) {
+  .header {
+    padding: 20px 40px;
+  }
+
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero__title {
+    font-size: 48px;
+  }
+
+  .hero__text {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .destinations {
+    padding: 60px 40px;
+  }
+
+  /* Cards go from one column to two */
+  .destinations__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* Keep the Learn More buttons lined up at the bottom of each card */
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .card__text {
+    flex: 1;
+  }
+}
+
+/* ===== Desktop: 1024px and up ===== */
+@media (min-width: 1024px) {
+  .header {
+    padding: 20px 80px;
+  }
+
+  /* Hide the hamburger and show the links as a horizontal bar */
+  .header__menu-btn {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+    position: static;
+    background: none;
+    box-shadow: none;
+  }
+
+  .nav__list {
+    display: flex;
+    gap: 8px;
+  }
+
+  .hero {
+    min-height: 640px;
+  }
+
+  .hero__title {
+    font-size: 64px;
+  }
+
+  .hero__text {
+    max-width: 640px;
+    font-size: 20px;
+  }
+
+  /* Keep content from stretching on very wide screens */
+  .destinations {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .destinations__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
