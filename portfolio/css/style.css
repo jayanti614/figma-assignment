@@ -1,0 +1,133 @@
+/* ===== Design tokens ===== */
+:root {
+  --color-accent: #ffb400;    /* yellow: buttons, active link */
+  --color-dark: #1c1c28;      /* headings, dark text */
+  --color-text: #444455;
+  --color-muted: #8a8a99;
+  --color-bg: #efeff6;        /* page background */
+  --color-card: #ffffff;
+  --color-border: #e1e1ea;
+
+  --font-main: "Inter", sans-serif;
+
+  --radius-card: 10px;
+  --radius-button: 4px;
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.12);
+
+  --container: 1200px;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Centers content and keeps it from stretching too wide */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== Accessibility ===== */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--color-dark);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: var(--radius-button);
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background: var(--color-card);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.navbar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+}
+
+/* Two black circles, like the logo in the design */
+.navbar__dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-dark);
+}
+
+.navbar__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar__link {
+  display: block;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-dark);
+  text-decoration: none;
+  border-radius: var(--radius-button);
+}
+
+.navbar__link:hover {
+  color: var(--color-accent);
+}
+
+/* The page you are on is shown in yellow */
+.navbar__link--active {
+  background: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.navbar__link--active:hover {
+  color: var(--color-dark);
+}
