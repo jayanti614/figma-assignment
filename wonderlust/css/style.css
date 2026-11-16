@@ -215,6 +215,60 @@ body {
 .nav__link:focus-visible {
   color: var(--color-primary);
 }
+/* ===== Footer ===== */
+.footer {
+  background: var(--color-primary);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer__logo {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.footer__text {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.footer__copy {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* ===== Accessibility ===== */
+/* Hidden until a keyboard user tabs to it */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--color-text);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: var(--radius-button);
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Clear outline when navigating with the keyboard */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Smooth scrolling for users who haven't asked for less motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 /* ===== Tablet: 768px and up ===== */
 @media (min-width: 768px) {
   .header {
