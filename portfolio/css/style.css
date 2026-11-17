@@ -575,3 +575,123 @@ blockquote {
     align-items: start;
   }
 }
+/* ===== Visually hidden (for screen readers only) ===== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== Clients strip ===== */
+.clients {
+  padding: 32px 0;
+}
+
+.clients__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px 48px;
+}
+
+.clients__item {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  opacity: 0.7;
+}
+
+/* Give each text logo a slightly different look */
+.clients__item:nth-child(2) {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+.clients__item:nth-child(3) {
+  font-style: italic;
+}
+
+.clients__item:nth-child(4) {
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--color-card);
+  padding: 40px 0 0;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 24px;
+  padding-bottom: 32px;
+}
+
+.footer__brand {
+  grid-column: 1 / -1;
+}
+
+.footer__tagline {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin-top: 12px;
+  max-width: 260px;
+}
+
+.footer__heading {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 12px;
+}
+
+.footer__list {
+  list-style: none;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.footer__list li {
+  margin-bottom: 8px;
+}
+
+.footer__link {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: var(--color-dark);
+  text-decoration: underline;
+}
+
+.footer__copy {
+  text-align: center;
+  font-size: 11px;
+  color: var(--color-muted);
+  padding: 16px 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Desktop: brand on the left, three columns on the right */
+@media (min-width: 768px) {
+  .footer__inner {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+
+  .footer__brand {
+    grid-column: auto;
+  }
+}
