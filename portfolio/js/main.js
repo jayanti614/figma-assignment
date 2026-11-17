@@ -77,3 +77,33 @@ if (contactForm) {
     }, 5000);
   });
 }
+// ===== Mobile menu =====
+const navBtn = document.querySelector(".navbar__menu-btn");
+const siteNav = document.querySelector("#site-nav");
+
+if (navBtn && siteNav) {
+  // Opens or closes the menu and keeps the accessibility attributes in sync
+  function setNav(open) {
+    siteNav.classList.toggle("is-open", open);
+    navBtn.setAttribute("aria-expanded", String(open));
+    navBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+
+  navBtn.addEventListener("click", () => {
+    setNav(!siteNav.classList.contains("is-open"));
+  });
+
+  // Escape closes the menu
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setNav(false);
+    }
+  });
+
+  // Clicking a link closes the menu
+  siteNav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      setNav(false);
+    }
+  });
+}
