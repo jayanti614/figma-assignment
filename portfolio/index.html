@@ -297,6 +297,73 @@
     </div>
   </div>
 </section>
+<section class="contact" id="contact">
+  <div class="container contact__inner">
+
+    <div class="contact__form-wrap">
+      <h2 class="contact__heading">Leave Me Your Info</h2>
+
+      <form class="form" id="contact-form">
+        <div class="form__field">
+          <label class="form__label" for="name">Your Full Name (Required)</label>
+          <input class="form__input" type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="email">Your Email (Required)</label>
+          <input class="form__input" type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="subject">Subject</label>
+          <input class="form__input" type="text" id="subject" name="subject">
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="message">Your Message</label>
+          <textarea class="form__input form__textarea" id="message" name="message" rows="6"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary">Send Message</button>
+        <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <aside class="contact__info" aria-labelledby="info-heading">
+      <h2 class="contact__heading" id="info-heading">Contact Information</h2>
+
+      <div class="info-card">
+        <div class="info-group">
+          <span class="info-group__icon" aria-hidden="true">📍</span>
+          <dl class="info-group__list">
+            <div><dt>Country:</dt><dd>Your Country</dd></div>
+            <div><dt>City:</dt><dd>Your City</dd></div>
+            <div><dt>Street:</dt><dd>123 Example Street</dd></div>
+          </dl>
+        </div>
+
+        <div class="info-group">
+          <span class="info-group__icon" aria-hidden="true">✉️</span>
+          <dl class="info-group__list">
+            <div><dt>Email:</dt><dd>hello@example.com</dd></div>
+            <div><dt>Skype:</dt><dd>@rayan.dev</dd></div>
+            <div><dt>Telegram:</dt><dd>@rayan_dev</dd></div>
+          </dl>
+        </div>
+
+        <div class="info-group">
+          <span class="info-group__icon" aria-hidden="true">📞</span>
+          <dl class="info-group__list">
+            <div><dt>Support Number:</dt><dd>+00 000 000 0000</dd></div>
+            <div><dt>Office:</dt><dd>+00 000 000 0001</dd></div>
+            <div><dt>Personal:</dt><dd>+00 000 000 0002</dd></div>
+          </dl>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</section>
   </main>
 
   <script src="js/main.js"></script>

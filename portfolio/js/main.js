@@ -59,3 +59,21 @@ if (carousel) {
   buildDots();
   goTo(0);
 }
+// ===== Contact form =====
+const contactForm = document.querySelector("#contact-form");
+const formStatus = document.querySelector("#form-status");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    // Stop the page from reloading. Nothing is saved, as the assignment says.
+    event.preventDefault();
+
+    formStatus.textContent = "Thank you! Your message has been sent.";
+    contactForm.reset();
+
+    // Clear the message after a few seconds
+    setTimeout(() => {
+      formStatus.textContent = "";
+    }, 5000);
+  });
+}

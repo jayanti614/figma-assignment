@@ -445,3 +445,133 @@ blockquote {
     --per-view: 3;
   }
 }
+/* ===== Contact ===== */
+.contact {
+  padding: 48px 0;
+}
+
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.contact__heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 16px;
+}
+
+/* Form */
+.form {
+  background: var(--color-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 24px;
+}
+
+.form__field {
+  margin-bottom: 16px;
+}
+
+.form__label {
+  display: block;
+  font-size: 11px;
+  color: var(--color-muted);
+  margin-bottom: 4px;
+}
+
+.form__input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--color-dark);
+  background: var(--color-bg);
+  border: 1px solid transparent;
+  border-radius: var(--radius-button);
+  padding: 10px 12px;
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background: var(--color-card);
+}
+
+.form__textarea {
+  resize: vertical;
+}
+
+.form__status {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #1a7f4b;
+}
+
+/* Contact information panel */
+.info-card {
+  background: var(--color-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 8px 20px;
+}
+
+.info-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.info-group:last-child {
+  border-bottom: none;
+}
+
+.info-group__icon {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-group__list {
+  flex: 1;
+  font-size: 11px;
+}
+
+.info-group__list > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.info-group__list dt {
+  color: var(--color-muted);
+}
+
+.info-group__list dd {
+  color: var(--color-dark);
+  font-weight: 500;
+  text-align: right;
+}
+
+/* Desktop: form on the left, info on the right */
+@media (min-width: 900px) {
+  .contact {
+    padding: 72px 0;
+  }
+
+  .contact__inner {
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+}
