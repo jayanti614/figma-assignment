@@ -11,8 +11,8 @@ JavaScript, written by hand for the Frontend Engineering Assignment.
 
 ## Live Demo
 
-- Wanderlust: https://YOUR-USERNAME.github.io/figma-assignment/wonderlust/
-- Developer Portfolio: https://YOUR-USERNAME.github.io/figma-assignment/portfolio/
+- Wanderlust: https://jayanti614.github.io/figma-assignment/wonderlust/
+- Developer Portfolio: https://jayanti614.github.io/figma-assignment/portfolio/
 
 ## Tech Stack
 
@@ -52,7 +52,7 @@ figma-assignment/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/figma-assignment.git
+   git clone https://github.com/jayanti614/figma-assignment.git
    cd figma-assignment
    ```
 2. Open either page in a browser:
@@ -71,4 +71,4 @@ No build step or dependencies are needed.
 
 ## Author
 
-Your Name
+Jayanti Mishra
