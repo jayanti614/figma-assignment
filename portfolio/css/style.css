@@ -3,7 +3,7 @@
   --color-accent: #ffb400;    /* yellow: buttons, active link */
   --color-dark: #1c1c28;      /* headings, dark text */
   --color-text: #444455;
-  --color-muted: #8a8a99;
+--color-muted: #6b6b7b;
   --color-bg: #efeff6;        /* page background */
   --color-card: #ffffff;
   --color-border: #e1e1ea;
@@ -174,7 +174,7 @@ button:focus-visible {
 
 .hero__role {
   display: block;
-  color: var(--color-accent);
+  color: #b37400;
 }
 
 .hero__text {
